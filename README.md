@@ -3,7 +3,7 @@
 ### Project Summary
 (To be added)
 ### Data Source
-A [dataset](https://archive.ics.uci.edu/dataset/320/student+performance) from two Portuguese schools via school reports and questionnaires, publically available on the UC Irvine Machine Learning Repository.
+A [dataset](https://archive.ics.uci.edu/dataset/320/student+performance) from two Portuguese schools via school reports and questionnaires, publicly available on the UC Irvine Machine Learning Repository.
 ### Ethical Considerations
 This is a publicly-available dataset that contains no information for the identification of specific individuals, and is licensed under a [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode) license, allowing for the sharing and adaptation of the dataset for any purpose provided that credit is attributed to the source.
 ### Methodology
