@@ -14,15 +14,27 @@ This is a publicly-available dataset that contains no information for the identi
     - A table for each was created in a SQL database hosted locally using pgAdmin 4.
     - CSV files were output from the SQL database using pgAdmin 4 for ease of reading into Pandas DataFrames.
 - Preprocessing:
-    - We converted the target G3 numerical scores (range 0 to 20) to Pass (greater than or equal to 10) or Fail (below 10).
-    - We converted categorical variables to "dummy" variables.
-    - We scaled our dataset to reduce the impact of extreme values/outliers.
+    - Converted the target G3 numerical scores (range 0 to 20) to Pass (greater than or equal to 10) or Fail (below 10)
+    - Converted categorical variables to "dummy" variables
+    - Scaled our dataset via "StandardScaler" to reduce the impact of extreme values/outliers
 - Initial model:
-        - ...
+    - Used default sklearn split of 75% training data, 25% testing
+    - Started with 100 nodes in the first hidden layer
+    - 80 nodes were used in the second hidden layer
+    - Used "relu" activation function for both
+    - Compiled the model using "adam" optimizer function
+    - Ran 100 epochs to train the model
 - Optimizing parameters to improve the model:
-    - ...
+    - Added an additional hidden layer
+    - Adjusted the number of nodes per layer, sticking to the "upside-down wedding cake" approach
+    - Changing the activation function lowered the accuracy score
+    - Trying the "MinMaxScaler" lowered the accuracy score
+    - Trying to add stratify also lowered the accuracy score
 - Inspection of the model/analysis of features' importance:
-    - ...
+    - Two scoring functions of [Permutation Feature Importance](https://scikit-learn.org/stable/modules/permutation_importance.html) were used to evaluate the weight of features on the models:
+        1. [r2_score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.r2_score.html#sklearn.metrics.r2_score)
+        2. [explained_variance_score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.explained_variance_score.html#sklearn.metrics.explained_variance_score)
+    - Keeping only the top ten most important features as determined by the above scorer(s) resulted in comparable accuracy scores
 ### Usage
 Download the contents of this repository to one directory, and explore the files/scripts.
 ### License
